@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flavours & Menu | Lee Berry Café | Discover Your Next Favourite</title>
+  <meta name="description" content="Cinematic 20-product menu storytelling from Lee Berry Café. Authentic Belgian Lotus Biscoff, traditional Kerala Avil Milk, wild blueberry mojitos, and cold-pressed citrus.">
+  <link rel="icon" type="image/png" href="assets/images/leeberry-logo.png">
+
+  <!-- Editorial premium typography: Manrope display, Playfair Display italic accents, DM Sans body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Custom Magnetic Cursor (Desktop) -->
+  <div class="custom-cursor" aria-hidden="true"></div>
+  <div class="cursor-follower" aria-hidden="true"></div>
+
+  <!-- Header Navigation -->
+  <header class="site-header scrolled" id="main-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo-link">
+        <img src="assets/images/leeberry-logo.png" alt="Lee Berry Café Logo" class="brand-logo-img">
+        <div class="brand-title-group">
+          <span class="brand-title-main">LEE BERRY</span>
+          <span class="brand-title-sub">Sip the happiness</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="index.html#story" class="nav-link">Our Story</a></li>
+          <li><a href="flavours.html" class="nav-link active">Flavours</a></li>
+          <li><a href="index.html#musttry" class="nav-link">Must Try</a></li>
+          <li><a href="index.html#findus" class="nav-link">Find Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Ambient Sound Synthesizer Toggle -->
+        <button id="sound-toggle-btn" class="sound-toggle-btn" title="Play Café Ambience" aria-label="Toggle ambient café sound">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+          </svg>
+        </button>
+
+        <a href="index.html#findus" class="cta-button cta-button-primary">
+          <span>Find Outlets</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <!-- Mobile Nav Toggle -->
+        <button class="mobile-nav-toggle" aria-label="Open mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         A. CINEMATIC INTRODUCTION
+         ====================================================================== -->
+    <section class="flavours-cinematic-intro">
+      <div class="container" style="position: relative; z-index: 2;">
+        <div class="hero-pill-badge" style="margin: 0 auto 1.5rem auto;">
+          <span class="hero-pill-dot"></span>
+          <span>THE LEE BERRY MENU</span>
+        </div>
+
+        <h1 class="hero-headline" style="max-width: 900px; margin-left: auto; margin-right: auto;">
+          DISCOVER YOUR NEXT <span class="headline-gradient">FAVOURITE</span>
+        </h1>
+
+        <p class="hero-description" style="max-width: 660px; margin-left: auto; margin-right: auto;">
+          Explore the Lee Berry menu, one flavour at a time. Swipe through fresh juices, creamy milkshakes, sparkling mojitos, and signature favourites.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         B. INTERACTIVE CATEGORY NAVIGATION & SEARCH
+         ====================================================================== -->
+    <div class="sticky-category-bar">
+      <div class="container sticky-bar-inner">
+        <!-- Category Filter Pills -->
+        <div class="cat-filter-pills" id="category-pills-wrap">
+          <!-- Populated by flavours.js -->
+        </div>
+
+        <!-- Real-Time Search Field -->
+        <div class="search-field-pill">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--text-dim); flex-shrink: 0;">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="flavour-search-input" class="search-field-input" placeholder="Search creations, ingredients...">
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         C. CINEMATIC SCROLL-BASED PRODUCT SHOWCASE
+         ====================================================================== -->
+    <section class="storytelling-showcase">
+      <div class="container">
+        <!-- Category-wise horizontal product rails, populated by flavours.js -->
+        <div class="story-products-container" id="story-products-wrap">
+          <!-- Populated dynamically by flavours.js with alternating parallax layouts -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Experience CTA -->
+    <section class="container" style="margin-bottom: 7rem;">
+      <div style="background: rgba(13, 21, 38, 0.6); border: 1px solid var(--border-glass); border-radius: var(--radius-xl); padding: 4.5rem 3rem; text-align: center; max-width: 900px; margin: 0 auto;">
+        <span class="hero-pill-badge" style="margin-bottom: 1.2rem;">Live Taste Experience</span>
+        <h3 style="font-family: var(--font-display); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 800; color: #fff; margin-bottom: 1rem;">
+          Sip the Happiness in Person
+        </h3>
+        <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 580px; margin: 0 auto 2.2rem auto;">
+          Drop by our campus café at IIT Madras or Rajarajeshwari Nagar in Bangalore. Watch every fruit pressed and shake blended to order right before your eyes.
+        </p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+          <a href="index.html#findus" class="cta-button cta-button-primary" style="padding: 0.9rem 2.2rem;">
+            <span>Get Directions to Campus</span>
+            <span>↗</span>
+          </a>
+          <a href="tel:+919133161559" class="cta-button cta-button-outline" style="padding: 0.9rem 2.2rem;">
+            <span>Call +91 91331 61559</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main-grid">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1rem;">
+            <img src="assets/images/leeberry-logo.png" alt="Lee Berry Café" style="width: 44px; height: 44px; border-radius: 50%;">
+            <div>
+              <div style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; color: #fff;">LEE BERRY CAFÉ</div>
+              <div style="font-size: 0.68rem; color: var(--berry-primary); letter-spacing: 0.12em; text-transform: uppercase;">Sip the happiness</div>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            Pure cold-pressed juices, traditional Kerala Avil Milk, and artisanal milkshakes crafted with farm-fresh goodness.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-h">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-nav-item">Home</a></li>
+            <li><a href="index.html#story" class="footer-nav-item">Our Story</a></li>
+            <li><a href="flavours.html" class="footer-nav-item">20 Flavours Collection</a></li>
+            <li><a href="index.html#musttry" class="footer-nav-item">Must Try</a></li>
+            <li><a href="index.html#findus" class="footer-nav-item">Find Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-h">Categories</h4>
+          <ul class="footer-links-list">
+            <li><a href="flavours.html?cat=juices" class="footer-nav-item">Fresh Juices</a></li>
+            <li><a href="flavours.html?cat=milkshakes" class="footer-nav-item">Milkshakes</a></li>
+            <li><a href="flavours.html?cat=mojitos" class="footer-nav-item">Mojitos & Coolers</a></li>
+            <li><a href="flavours.html?cat=snacks" class="footer-nav-item">Snacks & Starters</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-h">Outlets</h4>
+          <ul class="footer-links-list">
+            <li class="footer-nav-item">📍 IIT Madras Campus, Chennai</li>
+            <li class="footer-nav-item">📍 Rajarajeshwari Nagar, Bangalore</li>
+            <li class="footer-nav-item">📞 +91 91331 61559</li>
+            <li class="footer-nav-item">✉️ info@leeberry.in</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 Lee Berry Café. All rights reserved. "Sip the happiness" is a registered trademark.
+        </div>
+        <div>
+          Crafted with 3D WebGL, Motion & Gastronomic Passion
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Product Detail Modal Overlay -->
+  <div class="modal-overlay" id="product-modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">✕</button>
+      <div class="modal-grid">
+        <div class="modal-media-col">
+          <img src="" alt="" class="modal-product-img" id="modal-img">
+        </div>
+        <div class="modal-content-col">
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.8rem;" id="modal-tags"></div>
+          <h3 style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem;" id="modal-title"></h3>
+          <div style="display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.2rem;">
+            <span style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 900; color: var(--accent-gold);" id="modal-price"></span>
+            <span style="font-size: 0.8rem; color: var(--accent-mint); font-weight: 600;">● Handcrafted On Order</span>
+          </div>
+          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1.5rem;" id="modal-desc"></p>
+          <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 1.2rem; margin-bottom: 1.8rem;">
+            <div style="font-size: 0.74rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #cbd5e1; margin-bottom: 0.5rem;">Pure Ingredients</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;" id="modal-ingredients"></div>
+          </div>
+          <button class="cta-button cta-button-primary" style="padding: 0.85rem; font-size: 0.9rem;" onclick="window.showToast('🥤 Item selected for counter pick-up!')">
+            <span>Order at Counter (Pick Up)</span>
+            <span>✓</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core Vendor Scripts -->
+  <script src="assets/js/vendor/three.min.js"></script>
+  <script src="assets/js/vendor/gsap.min.js"></script>
+  <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/vendor/lenis.min.js"></script>
+
+  <!-- Client Interactions Controller -->
+  <script type="module" src="assets/js/main.js"></script>
+
+  <!-- Flavours Page Storytelling Engine -->
+  <script type="module" src="assets/js/flavours.js"></script>
+</body>
+</html>
